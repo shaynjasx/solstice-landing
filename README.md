@@ -146,7 +146,7 @@ $fromName = 'Solstice Website';
 
 ---
 
-## Suggested report paragraphs (copy-paste into submission)
+## Suggested report paragraphs 
 **Approach:**
 I implemented the responsive landing page using Bootstrap and SCSS, following the Figma mockup and interpreting the layout decisions required for smaller viewports. I added a contact form (not in the mockup) with server-side validation and integrated PHPMailer for SMTP delivery. When SMTP credentials are not available, submissions are recorded to `submissions.log` so the client can verify leads.
 
@@ -162,12 +162,12 @@ I converted the collections area to a responsive three-column layout and added a
 ---
 
 ## Total Hours
-- Replace this placeholder with your tracked hours: **[TOTAL_HOURS]**
+- Replace this placeholder with your tracked hours: **05:51:12**
 
 ---
 
 ## GitHub Repository
-- Add your repository link here: **[GITHUB_REPO_URL]**
+- Add your repository link here: **(https://github.com/shaynjasx/solstice-landing/)**
 
 ## Live Preview Link
 - Add your Netlify/Vercel live URL here: **[LIVE_PREVIEW_URL]**

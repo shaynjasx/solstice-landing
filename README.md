@@ -54,7 +54,6 @@ I converted the collections area from a horizontal layout to a three-column grid
 
 ## Exact changes in `index.php` and `scss/style.scss`
 
-These are the concrete edits made to satisfy the client's task and the unmocked contact form requirement:
 
 - `index.php`:
   - Added the contact form section between the "DOWNLOAD BROCHURE" CTA and the lifestyle image row.
@@ -146,7 +145,7 @@ $fromName = 'Solstice Website';
 
 ---
 
-## Suggested report paragraphs (copy-paste into submission)
+## Suggested report paragraphs 
 **Approach:**
 I implemented the responsive landing page using Bootstrap and SCSS, following the Figma mockup and interpreting the layout decisions required for smaller viewports. I added a contact form (not in the mockup) with server-side validation and integrated PHPMailer for SMTP delivery. When SMTP credentials are not available, submissions are recorded to `submissions.log` so the client can verify leads.
 

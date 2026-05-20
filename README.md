@@ -108,15 +108,19 @@ I converted the collections area into a responsive three-column layout using Boo
 **Resolution:**  
 I sourced equivalent visuals that matched the intended aesthetic and layout direction while maintaining consistency with the original design language.
 
-### Q2: SMTP credentials and final recipient email were not provided.
+### Q2: The live deployment platform (Vercel) does not support PHP execution.
 **Resolution:**  
-I integrated PHPMailer with placeholder SMTP configuration and implemented a local logging fallback. For the live deployment, I used Formspree which handles email delivery and submission tracking without requiring SMTP credentials.
+I used Formspree for the live form handling since Vercel is a static hosting platform. The `form-handler.php` is still included in the repository to demonstrate server-side validation knowledge and can be configured with real SMTP credentials when deployed to a PHP-supported server.
 
-### Q3: Responsive behavior for the unmocked contact form section was not specified.
+### Q3: No recipient email address was specified for the contact form.
+**Resolution:**  
+Since no email was provided in the brief, I used my personal email address as the form recipient in the interim via Formspree. This can easily be updated to the correct recipient email when provided.
+
+### Q4: Responsive behavior for the unmocked contact form section was not specified.
 **Resolution:**  
 I followed the spacing and visual rhythm established in the provided design and implemented responsive stacking behavior using Bootstrap grid utilities.
 
-### Q4: Static deployment platforms do not natively support traditional PHP handling.
+### Q5: Static deployment platforms do not natively support traditional PHP handling.
 **Resolution:**  
 I separated concerns by keeping the PHP implementation in the repository for review while using Formspree for the live deployment. This ensured the form remained fully functional on Vercel without requiring a separate backend server.
 

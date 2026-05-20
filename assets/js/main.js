@@ -23,12 +23,13 @@ if (video) {
 
             video.play();
             document.getElementById('videoOverlay').style.display = 'none';
+
         }
     });
 }
 
 
-// CONTACT FORM AJAX
+// CONTACT FORM — Formspree
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
@@ -43,23 +44,28 @@ if (contactForm) {
         try {
 
             const response = await fetch('https://formspree.io/f/xzdweakb', {
-    method: 'POST',
-    body: formData,
-    headers: {
-        'Accept': 'application/json'
-    }
-});
+                method: 'POST',
+                body: formData,
+                headers: {
+                    'Accept': 'application/json'
+                }
+            });
 
-if (response.ok) {
-    formMessage.innerHTML = `
-        <div class="alert alert-success mt-3 text-center">
-            Thank you! Your inquiry has been submitted.
-        </div>
-    `;
-    contactForm.reset();
-} else {
-    throw new Error('Failed');
-}
+            if (response.ok) {
+
+                formMessage.innerHTML = `
+                    <div class="alert alert-success mt-3 text-center">
+                        Thank you! Your inquiry has been submitted.
+                    </div>
+                `;
+
+                contactForm.reset();
+
+            } else {
+
+                throw new Error('Failed');
+
+            }
 
         } catch (error) {
 
@@ -68,6 +74,7 @@ if (response.ok) {
                     Something went wrong. Please try again.
                 </div>
             `;
+
         }
     });
 }

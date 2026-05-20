@@ -161,12 +161,12 @@ I converted the collections area to a responsive three-column layout and added a
 ---
 
 ## Total Hours
-- Replace this placeholder with your tracked hours: **[TOTAL_HOURS]**
+- Replace this placeholder with your tracked hours: **05:51:12**
 
 ---
 
 ## GitHub Repository
-- Add your repository link here: **[GITHUB_REPO_URL]**
+- Add your repository link here: **(https://github.com/shaynjasx/solstice-landing/)**
 
 ## Live Preview Link
 - Add your Netlify/Vercel live URL here: **[LIVE_PREVIEW_URL]**

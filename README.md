@@ -161,7 +161,7 @@ I converted the collections area to a responsive three-column layout and added a
 ---
 
 ## Total Hours
-- Replace this placeholder with your tracked hours: **05:51:12**
+- Total Hours worked:  **06:24:17*
 
 ---
 

@@ -50,9 +50,9 @@ if (contactForm) {
             const result = await response.text();
 
             formMessage.innerHTML = `
-                <div class="alert alert-success mt-3">
-                    ${result}
-                </div>
+               <div class="alert alert-success mt-3 text-center">
+    Thank you! Your inquiry has been submitted.
+</div>
             `;
 
             contactForm.reset();

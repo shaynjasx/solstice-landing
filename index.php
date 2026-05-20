@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Solstice — Ranch Living</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="scss/style.css">
+</head>
+<body>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero__left">
+            <div class="hero__top">
+                <img src="assets/images/landscape sunrise.png" alt="Solstice Landscape">
+                <div class="hero__logo">
+                    <img src="assets/images/solstice-logo.svg" alt="Solstice Logo">
+                </div>
+            </div>
+            <div class="hero__bottom">
+                <img src="assets/images/house sunrise.png" alt="Solstice Home">
+            </div>
+        </div>
+        <div class="hero__right">
+            <video autoplay muted loop playsinline>
+                <source src="assets/videos/hero-video.mp4" type="video/mp4">
+                <img src="assets/images/landscape sunrise.png" alt="Hero Background">
+            </video>
+        </div>
+    </section>
+
+    <!-- SECTION 2: INTRO TEXT -->
+    <section class="intro">
+        <div class="container">
+            <div class="intro__content text-center">
+                <h2 class="intro__tagline">RANCH LIVING,<br>IN RHYTHM WITH NATURE.</h2>
+                <h3 class="intro__subtitle">New Homes from the $700s</h3>
+                <p class="intro__text">
+                    Welcome home to a quieter corner of Littleton. Tucked along the High Line Canal, Solstice is a boutique community from Shea Homes, set within a natural landscape that feels both peaceful and connected. With Chef and Lane and our four Range Nearby, Solstice is a place where getting outside is part of the everyday, and where each season brings its own rhythm to life.
+                </p>
+            </div>
+        </div>
+    </section>
+
+ <!-- SECTION 3: COLLECTIONS -->
+<section class="collections">
+    <div class="container">
+        <div class="row g-4">
+
+            <!-- HORIZON COLLECTION -->
+            <div class="col-lg-4">
+                <div class="collection__card">
+                    <div class="collection__image">
+                        <img src="assets/images/house.svg" alt="Horizon Collection">
+                    </div>
+                    <div class="collection__body">
+                        <p class="collection__price">Homes from the $700s</p>
+                        <h3 class="collection__title">HORIZON COLLECTION</h3>
+                        <p class="collection__specs">1,832–3,215 Sq. Ft. &nbsp;|&nbsp; 2-4 Beds &nbsp;|&nbsp; 2.5-3.5 Baths</p>
+                        <p class="collection__text">The ease of ranch-style living is elegantly imagined in these new offerings from the Horizon Collection by Shea Homes at Solstice.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- REFLECTION COLLECTION -->
+            <div class="col-lg-4">
+                <div class="collection__card">
+                    <div class="collection__image">
+                        <img src="assets/images/reflection.png" alt="Reflection Collection">
+                    </div>
+                    <div class="collection__body">
+                        <p class="collection__price">Homes from the $800s</p>
+                        <h3 class="collection__title">REFLECTION COLLECTION</h3>
+                        <p class="collection__specs">2,369–4,022 Sq. Ft. &nbsp;|&nbsp; 2-4 Beds &nbsp;|&nbsp; 2.5-4.5 Baths</p>
+                        <p class="collection__text">These open-concept ranch home designs seamlessly flow from room to room and from inside to out.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- SUMMIT COLLECTION -->
+            <div class="col-lg-4">
+                <div class="collection__card">
+                    <div class="collection__image">
+                        <img src="assets/images/summit.jpg" alt="Summit Collection">
+                    </div>
+                    <div class="collection__body">
+                        <p class="collection__price">Homes from the $900s</p>
+                        <h3 class="collection__title">SUMMIT COLLECTION</h3>
+                        <p class="collection__specs">2,850–4,600 Sq. Ft. &nbsp;|&nbsp; 3-5 Beds &nbsp;|&nbsp; 3-5 Baths</p>
+                        <p class="collection__text">The Summit Collection represents the pinnacle of ranch-style luxury at Solstice, crafted with natural stone details and seamless indoor-outdoor flow.</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+<!-- SECTION 4: VIDEO -->
+<section class="video-section">
+    <div class="video-wrapper">
+        <video id="mainVideo" poster="assets/images/video-poster.jpg">
+            <source src="assets/videos/main-video.mp4" type="video/mp4">
+        </video>
+        <div class="video-overlay" id="videoOverlay" onclick="playVideo()">
+            <button class="video-play-btn">
+                <svg viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+                    <circle cx="30" cy="30" r="30" fill="rgba(0,0,0,0.4)"/>
+                    <polygon points="24,18 24,42 44,30" fill="white"/>
+                </svg>
+            </button>
+        </div>
+    </div>
+</section>
+<!-- SECTION 5: HOME SWEET HIGH LINE  -->
+ <section class="highline">
+    <div class="container">
+        <div class="highline__content text-center">
+            <h2 class="highline__title">HOME SWEET HIGH LINE</h2>
+            <p class="highline__text">
+                Perfectly situated near the southernmost point of the High Line Canal,<br>
+                Solstice is a boutique community from Shea Homes®,<br>
+                rooted in nature, home, and family.
+            </p>
+            <a href="#" class="highline__btn">DOWNLOAD BROCHURE</a>
+        </div>
+
+       
+<!-- CONTACT FORM -->
+<div class="contact-form">
+    <h3 class="contact-form__title">Get In Touch</h3>
+
+    <form id="contactForm" method="POST" action="form-handler.php">
+
+        <div class="row g-3">
+
+            <div class="col-md-6">
+                <input
+                    type="text"
+                    class="form-control"
+                    id="fullName"
+                    name="fullName"
+                    placeholder="Full Name"
+                    required
+                >
+            </div>
+
+            <div class="col-md-6">
+                <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    name="email"
+                    placeholder="Email Address"
+                    required
+                >
+            </div>
+
+            <div class="col-md-12">
+                <select
+                    class="form-select"
+                    id="inquiryType"
+                    name="inquiryType"
+                    required
+                >
+                    <option value="" disabled selected>
+                        Type of Inquiry
+                    </option>
+
+                    <option value="general">
+                        General Inquiry
+                    </option>
+
+                    <option value="tour">
+                        Schedule a Tour
+                    </option>
+
+                    <option value="pricing">
+                        Pricing Information
+                    </option>
+
+                    <option value="availability">
+                        Home Availability
+                    </option>
+                </select>
+            </div>
+
+            <div class="col-md-12">
+                <textarea
+                    class="form-control"
+                    id="message"
+                    name="message"
+                    rows="4"
+                    placeholder="Message"
+                    required
+                ></textarea>
+            </div>
+
+            <div class="col-md-12 text-center">
+
+                <button type="submit" class="highline__btn">
+                    SUBMIT
+                </button>
+
+                <?php if(isset($_GET['success'])): ?>
+                    <div class="alert alert-success mt-3">
+                        Form submitted successfully!
+                    </div>
+                <?php endif; ?>
+
+                <?php if(isset($_GET['error'])): ?>
+                    <div class="alert alert-danger mt-3">
+                        <?php if ($_GET['error'] === 'mail'): ?>
+                            We could not send your message. Please check server mail settings or contact the site administrator.
+                        <?php elseif ($_GET['error'] === 'email'): ?>
+                            Please provide a valid email address.
+                        <?php else: ?>
+                            Please complete all fields correctly.
+                        <?php endif; ?>
+                    </div>
+                <?php endif; ?>
+
+            </div>
+
+        </div>
+
+    </form>
+</div>
+        <!-- 4 LIFESTYLE PHOTOS -->
+        <div class="highline__photos">
+            <div class="highline__photo">
+                <img src="assets/images/6.png" alt="Lifestyle 1">
+            </div>
+            <div class="highline__photo">
+                <img src="assets/images/7.png" alt="Lifestyle 2">
+            </div>
+            <div class="highline__photo">
+                <img src="assets/images/8.png" alt="Lifestyle 3">
+            </div>
+            <div class="highline__photo">
+                <img src="assets/images/9.png" alt="Lifestyle 4">
+            </div>
+        </div>
+    </div>
+ </section>
+ <!-- FOOTER -->
+<footer class="solstice-footer">
+    <div class="container">
+        <div class="footer__logo">
+            <img src="assets/images/solstice-logo.svg" alt="Solstice Logo">
+        </div>
+
+        <div class="footer__legal">
+            <p>&#9400; This is not an offer for real estate for sale, nor solicitation of an offer to buy to residents of any state or province in which registrations and other legal requirements have not been fulfilled. Pricing does not include options, elevation, or lot premiums; effective date of publication and subject to change without notice. All square footages and measurements are artist's conception based on preliminary information, not to scale and subject to change. Home pictured may not be actual home for sale or actual model home, but rather a representation of a similar model or elevation design. Models are not an indication of racial preference. Trademarks are property of their respective owners. Equal Housing Opportunity. Copyright ©2026, Shea Homes. All rights reserved. Powered by Milestone®.</p>
+        </div>
+
+        <div class="footer__accessibility">
+            <p>Shea Homes is committed to ensuring digital accessibility for people with disabilities. We are continually improving the user experience for everyone and applying the relevant accessibility standards. We welcome your feedback on the accessibility of <a href="http://SheaHomes.com">SheaHomes.com</a>. Please let us know if you encounter accessibility barriers by emailing <a href="mailto:info@sheahomes.com">info@sheahomes.com</a>.</p>
+        </div>
+    </div>
+</footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/main.js"></script>
+</body>
+</html>

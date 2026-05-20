@@ -14,7 +14,6 @@
 - Styled the project using SCSS with Bootstrap as the base framework.
 - Implemented responsive layouts and tested desktop, tablet, and mobile breakpoints.
 - Designed and developed the additional contact form section not included in the original mockup.
-- Added server-side validation and PHPMailer integration with a local logging fallback.
 - Implemented the requested three-column collections layout revision and designed a matching third collection card.
 - Connected the project to GitHub and deployed the site to Vercel.
 - Performed final responsive and functionality testing across devices.
@@ -30,8 +29,7 @@
 - Three-column collections section revision with custom third collection card.
 - Responsive embedded video section with custom play interaction.
 - Custom-designed contact form section integrated naturally into the page flow.
-- Client-side and server-side validation for the contact form.
-- PHPMailer-ready backend integration with submission logging fallback.
+- Client-side validation and Formspree integration for form submission handling.
 - Success/error messaging for form submission feedback.
 - Responsive image gallery/lifestyle section.
 - Fully responsive footer and accessibility section.
@@ -41,39 +39,37 @@
 
 ## AI Usage
 
-Used AI to generate initial SCSS boilerplate and scaffold the collections section layout. All responsive breakpoint decisions, visual styling adjustments, debugging, and final integration were done independently
+- Used AI to help scaffold the initial SCSS structure and generate the collections section layout boilerplate.
+- Used AI for clarification on Bootstrap grid behavior and SCSS nesting patterns.
+- Used AI as a debugging and reference tool during deployment and GitHub integration.
+- All responsive decisions, layout implementation, visual styling, debugging, deployment, and final integration work were completed independently.
 
 ---
 
 ## Independent Decisions
 
-1. Chose PHPMailer instead of PHP `mail()` to allow cleaner SMTP integration and more reliable email handling.
-2. Implemented a `submissions.log` fallback system so submissions can still be verified even when SMTP credentials are unavailable.
-3. Converted the collections section into a responsive three-column layout and designed a third matching collection card while maintaining the visual consistency of the original design.
-4. Kept the final deployment frontend-based using `index.html` for better compatibility with Vercel static hosting while maintaining PHP server-side handling separately.
-5. Added responsive spacing and stacking adjustments for tablet and mobile layouts to preserve readability and visual hierarchy.
+1. Chose Formspree over PHPMailer for live form handling since Vercel is a static hosting platform and does not execute PHP. This allowed the form to remain fully functional on the live deployment while keeping the implementation clean and maintainable.
+2. Implemented a `submissions.log` fallback in `form-handler.php` so submissions could still be verified even when SMTP credentials are unavailable — kept in the repository to demonstrate server-side validation and PHPMailer knowledge.
+3. Converted the collections section into a responsive three-column layout and designed a third matching collection card — the Summit Collection — while maintaining the visual consistency of the original two cards.
+4. Kept the final deployment frontend-based on Vercel for better static hosting compatibility while maintaining the complete PHP implementation in the repository for review.
+5. Added responsive spacing and stacking adjustments for tablet and mobile layouts to preserve readability and visual hierarchy across all screen sizes.
 
 ---
 
 ## Design Revision — Collections Layout
 
-I converted the collections area into a responsive three-column layout using Bootstrap’s grid system. A third collection card was added and designed to visually match the typography, spacing, image treatment, and structure of the original two cards. The layout collapses appropriately across tablet and mobile breakpoints to maintain readability and spacing consistency.
+I converted the collections area into a responsive three-column layout using Bootstrap's grid system. A third collection card — the **Summit Collection** — was added and designed to visually match the typography, spacing, image treatment, and structure of the original two cards. The layout collapses appropriately across tablet and mobile breakpoints to maintain readability and spacing consistency.
 
 ---
 
 ## Contact Form Design Approach
 
-- Positioned the contact form between the “DOWNLOAD BROCHURE” CTA and the lifestyle image section to maintain the page’s visual rhythm.
-- Designed the form to match the site’s existing typography, spacing, and neutral color palette.
-- Implemented fields for:
-  - Full Name
-  - Email Address
-  - Inquiry Type
-  - Message
-  - Submit Button
+- Positioned the contact form between the "DOWNLOAD BROCHURE" CTA and the lifestyle image section to maintain the page's visual rhythm.
+- Designed the form to match the site's existing typography, spacing, and neutral color palette.
+- Implemented fields for Full Name, Email Address, Inquiry Type, Message, and a Submit button.
 - Added responsive behavior using Bootstrap grid classes.
-- Added both client-side and server-side validation.
-- Integrated PHPMailer-ready backend handling with a logging fallback when SMTP credentials are unavailable.
+- Added client-side validation via HTML required attributes.
+- Integrated Formspree for live form submission handling — submissions are delivered to email and tracked via the Formspree dashboard.
 - Added success/error feedback messaging for user interaction.
 
 ---
@@ -92,11 +88,17 @@ I converted the collections area into a responsive three-column layout using Boo
 - Added custom variables, typography styles, spacing, responsive breakpoints, and section-specific styling.
 - Compiled into `scss/style.css`.
 
+### `assets/js/main.js`
+- Handles video play/pause interaction.
+- Handles contact form submission via Formspree API using fetch.
+- Returns success or error feedback to the user without page reload.
+
 ### `form-handler.php`
+- Included in the repository to demonstrate server-side validation and PHPMailer integration knowledge.
 - Performs server-side validation for required fields and email formatting.
 - Uses PHPMailer integration structure for SMTP support.
-- Stores submissions locally in `submissions.log` if SMTP credentials are not configured.
-- Returns success/error states back to the frontend.
+- Stores submissions locally in `submissions.log` as a fallback.
+- Not used in the live Vercel deployment due to static hosting limitations.
 
 ---
 
@@ -108,7 +110,7 @@ I sourced equivalent visuals that matched the intended aesthetic and layout dire
 
 ### Q2: SMTP credentials and final recipient email were not provided.
 **Resolution:**  
-I integrated PHPMailer with placeholder SMTP configuration and implemented a local logging fallback to ensure submissions could still be verified during review.
+I integrated PHPMailer with placeholder SMTP configuration and implemented a local logging fallback. For the live deployment, I used Formspree which handles email delivery and submission tracking without requiring SMTP credentials.
 
 ### Q3: Responsive behavior for the unmocked contact form section was not specified.
 **Resolution:**  
@@ -116,7 +118,7 @@ I followed the spacing and visual rhythm established in the provided design and 
 
 ### Q4: Static deployment platforms do not natively support traditional PHP handling.
 **Resolution:**  
-I separated the frontend deployment (`index.html`) from the PHP backend handling logic while maintaining the complete PHP implementation in the repository for review and future server-side deployment.
+I separated concerns by keeping the PHP implementation in the repository for review while using Formspree for the live deployment. This ensured the form remained fully functional on Vercel without requiring a separate backend server.
 
 ---
 
@@ -140,6 +142,4 @@ https://solstice-landing.vercel.app
 
 ## Conclusion
 
-This project was built with a focus on responsive implementation, clean semantic structure, maintainable SCSS organization, and practical server-side form handling. The goal was to closely match the provided design while making thoughtful responsive and UX decisions independently where specifications were not explicitly provided.
-
-I look forward to discussing the project and any real-time modifications during the Teams call.
+This project was built with a focus on responsive implementation, clean semantic structure, maintainable SCSS organization, and practical form handling. The goal was to closely match the provided design while making thoughtful responsive and UX decisions independently where specifications were not explicitly provided. I look forward to discussing the project and any real-time modifications during the Teams call.

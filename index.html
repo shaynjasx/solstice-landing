@@ -131,7 +131,7 @@
 <div class="contact-form">
     <h3 class="contact-form__title">Get In Touch</h3>
 
-    <form id="contactForm" method="POST" action="form-handler.php">
+    <form id="contactForm" method="POST">
 
         <div class="row g-3">
 
@@ -203,23 +203,7 @@
                     SUBMIT
                 </button>
 
-                <?php if(isset($_GET['success'])): ?>
-                    <div class="alert alert-success mt-3">
-                        Form submitted successfully!
-                    </div>
-                <?php endif; ?>
-
-                <?php if(isset($_GET['error'])): ?>
-                    <div class="alert alert-danger mt-3">
-                        <?php if ($_GET['error'] === 'mail'): ?>
-                            We could not send your message. Please check server mail settings or contact the site administrator.
-                        <?php elseif ($_GET['error'] === 'email'): ?>
-                            Please provide a valid email address.
-                        <?php else: ?>
-                            Please complete all fields correctly.
-                        <?php endif; ?>
-                    </div>
-                <?php endif; ?>
+                <div id="formMessage" class="mt-3"></div>
 
             </div>
 

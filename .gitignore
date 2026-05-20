@@ -8,3 +8,5 @@
 submissions.log
 /.idea/
 /*.log
+.vercel
+.env*.local

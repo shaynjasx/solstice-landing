@@ -1,0 +1,7 @@
+{
+    "functions": {
+        "api/form-handler.php": {
+            "runtime": "vercel-community/php@0.6.1"
+        }
+    }
+}

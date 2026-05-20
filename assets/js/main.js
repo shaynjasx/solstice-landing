@@ -23,13 +23,12 @@ if (video) {
 
             video.play();
             document.getElementById('videoOverlay').style.display = 'none';
-
         }
     });
 }
 
 
-// CONTACT FORM — Formspree
+// CONTACT FORM — PHP Handler
 const contactForm = document.getElementById('contactForm');
 const formMessage = document.getElementById('formMessage');
 
@@ -43,15 +42,14 @@ if (contactForm) {
 
         try {
 
-            const response = await fetch('https://formspree.io/f/xzdweakb', {
+            const response = await fetch('/api/form-handler.php', {
                 method: 'POST',
-                body: formData,
-                headers: {
-                    'Accept': 'application/json'
-                }
+                body: formData
             });
 
-            if (response.ok) {
+            const result = await response.json();
+
+            if (result.success) {
 
                 formMessage.innerHTML = `
                     <div class="alert alert-success mt-3 text-center">
@@ -63,8 +61,11 @@ if (contactForm) {
 
             } else {
 
-                throw new Error('Failed');
-
+                formMessage.innerHTML = `
+                    <div class="alert alert-danger mt-3 text-center">
+                        ${result.message || 'Something went wrong. Please try again.'}
+                    </div>
+                `;
             }
 
         } catch (error) {
@@ -74,7 +75,6 @@ if (contactForm) {
                     Something went wrong. Please try again.
                 </div>
             `;
-
         }
     });
 }

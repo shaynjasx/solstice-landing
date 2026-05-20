@@ -12,7 +12,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $message = htmlspecialchars(trim($_POST['message'] ?? ''));
 
     $basePath = rtrim(dirname($_SERVER['PHP_SELF']), '/\\');
-    $redirectBase = $basePath === '' ? '/index.php' : $basePath . '/index.php';
+    $redirectBase = $basePath === '' ? '/index.html' : $basePath . '/index.html';
 
     if (empty($fullName) || empty($email) || empty($inquiryType) || empty($message)) {
         header("Location: {$redirectBase}?error=1");
@@ -78,5 +78,5 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     exit();
 }
 
-header('Location: /index.php');
+header('Location: /index.html');
 exit();

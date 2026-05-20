@@ -41,11 +41,7 @@
 
 ## AI Usage
 
-- Used AI to help scaffold the initial SCSS structure and organize the project architecture.
-- Used AI for clarification on Bootstrap grid behavior and SCSS nesting patterns.
-- Used AI-assisted examples for PHPMailer integration and server-side validation logic.
-- Used AI as a debugging/reference tool during deployment and GitHub integration.
-- All responsive decisions, layout implementation, visual styling, debugging, deployment, and final integration work were completed independently.
+Used AI to generate initial SCSS boilerplate and scaffold the collections section layout. All responsive breakpoint decisions, visual styling adjustments, debugging, and final integration were done independently
 
 ---
 
@@ -145,3 +141,5 @@ https://solstice-landing.vercel.app
 ## Conclusion
 
 This project was built with a focus on responsive implementation, clean semantic structure, maintainable SCSS organization, and practical server-side form handling. The goal was to closely match the provided design while making thoughtful responsive and UX decisions independently where specifications were not explicitly provided.
+
+I look forward to discussing the project and any real-time modifications during the Teams call.

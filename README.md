@@ -169,7 +169,7 @@ I converted the collections area to a responsive three-column layout and added a
 - Add your repository link here: **(https://github.com/shaynjasx/solstice-landing/)**
 
 ## Live Preview Link
-- Add your Netlify/Vercel live URL here: **[LIVE_PREVIEW_URL]**
+- Add your Netlify/Vercel live URL here: **[https://solstice-landing.vercel.app/]**
 
 ---
 

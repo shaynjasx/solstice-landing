@@ -38,7 +38,7 @@ try {
     exit();
 }
 
-// Save to database
+// Save to database + log
 try {
     $stmt = $pdo->prepare("
         INSERT INTO contact_submissions (full_name, email, inquiry_type, message)
@@ -51,6 +51,16 @@ try {
         ':inquiry_type' => $inquiryType,
         ':message'      => $message
     ]);
+
+    // Log to file
+    $logFile  = __DIR__ . '/../submissions.log';
+    $logEntry = "[" . date('Y-m-d H:i:s') . "]\n" .
+                "Name: {$fullName}\n" .
+                "Email: {$email}\n" .
+                "Inquiry: {$inquiryType}\n" .
+                "Message: {$message}\n" .
+                "---\n";
+    file_put_contents($logFile, $logEntry, FILE_APPEND | LOCK_EX);
 
     echo json_encode([
         'success' => true,

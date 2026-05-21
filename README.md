@@ -41,12 +41,11 @@
 
 ## AI Usage
 
-- Used AI to help scaffold the initial SCSS structure and generate the collections section layout boilerplate.
-- Used AI for clarification on Bootstrap grid behavior and SCSS nesting patterns.
-- Used AI as a debugging and reference tool during PHP, MySQL, and deployment integration.
-- Used AI to help with grammar and wording clarity in written communication throughout the process.
-- All responsive decisions, layout implementation, visual styling, PHP and database work, debugging, deployment, and final integration were completed independently.
-
+- Used AI to help set up the initial SCSS file structure and understand how SCSS variables and nesting work, since I had not used SCSS professionally before this project.
+- Used AI to clarify how Bootstrap grid columns behave at different breakpoints.
+- Used AI for help with PHP form validation logic and MySQL database setup, since these were new to me.
+- Used AI to check grammar and improve clarity in written communication throughout the project.
+- All design decisions, layout choices, responsive behavior, visual styling, and actual implementation were done by me. AI was used as a learning and reference tool, not to write the final code for me.
 ---
 
 ## Independent Decisions

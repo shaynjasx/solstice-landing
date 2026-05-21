@@ -124,7 +124,7 @@ I converted the collections area from a horizontal alternating layout into a res
 
 ### Q1: Some visual assets were not directly exportable from the Figma file at acceptable quality.
 **Resolution:**  
-I sourced equivalent visuals from free stock sites including Unsplash and Pexels, selecting images that closely matched the aesthetic and content of the original mockup — ranch landscapes, home exteriors, and lifestyle photography.
+I sourced equivalent visuals from free stock sites in Canva , Google , Pexels, selecting images that closely matched the aesthetic and content of the original mockup — ranch landscapes, home exteriors, and lifestyle photography.
 
 ### Q2: The live deployment platform (Vercel) does not support PHP execution.
 **Resolution:**  

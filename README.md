@@ -146,7 +146,8 @@ I exported what was available from the Figma file and supplemented with free sto
 
 ## Total Hours
 
-**Total Worked Hours: 06:41:50**
+**Total Coding Time:** 6 hours 41 minutes (active development time tracked via Clockify),
+
 
 ---
 

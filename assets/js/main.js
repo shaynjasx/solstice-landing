@@ -42,10 +42,10 @@ if (contactForm) {
 
         try {
 
-            const response = await fetch('/api/form-handler.php', {
-                method: 'POST',
-                body: formData
-            });
+            const response = await fetch('api/form-handler.php', {
+    method: 'POST',
+    body: formData
+});
 
             const result = await response.json();
 
